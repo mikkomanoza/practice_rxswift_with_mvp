@@ -15,7 +15,6 @@ class PublicSessionModel {
     var companyName: String?
     var gatheringType: String?
     var sessionType: String?
-//    var phone: PhoneModel?
     
     // MARK: Instance Method
     func loadFromDictionary(_ dict: [String: AnyObject]) {
@@ -37,10 +36,6 @@ class PublicSessionModel {
         if let data = dict["session_type"] as? String {
             self.sessionType = data
         }
-        
-//        if let data = dict["phone"] as? [String:AnyObject] {
-//            self.phone = PhoneModel.build(data)
-//        }
     }
     
     // MARK: Class Method
@@ -50,29 +45,3 @@ class PublicSessionModel {
         return session
     }
 }
-
-//class PhoneModel {
-//    var mobile: String?
-//    var home: String?
-//    var office: String?
-//
-//    // MARK: Instance Method
-//    func loadFromDictionary(_ dict: [String: AnyObject]) {
-//        if let data = dict["mobile"] as? String {
-//            self.mobile = data
-//        }
-//        if let data = dict["home"] as? String {
-//            self.home = data
-//        }
-//        if let data = dict["office"] as? String {
-//            self.office = data
-//        }
-//    }
-//
-//    // MARK: Class Method
-//    class func build(_ dict: [String: AnyObject]) -> PhoneModel {
-//        let phone = PhoneModel()
-//        phone.loadFromDictionary(dict)
-//        return phone
-//    }
-//}

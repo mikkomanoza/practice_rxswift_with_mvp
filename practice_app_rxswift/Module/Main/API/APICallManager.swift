@@ -56,7 +56,6 @@ class APICallManager {
                         var data = [PublicSessionModel]()
                         for item in publicSessionDict {
                             let single = PublicSessionModel.build(item)
-                            print("single 1: \(single)")
                             data.append(single)
                         }
     
